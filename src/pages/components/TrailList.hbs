@@ -1,0 +1,18 @@
+<table class="table is-fullwidth">
+  <thead>
+    <th>Amount</th>
+    <th>Method donated</th>
+    <th>Trailfinder</th>
+    <th>Traillist</th>
+  </thead>
+  <tbody>
+    {{#each trails}}
+      <tr>
+        <td>{{amount}}</td>
+        <td>{{method}}</td>
+        <td> {{trailfinder.firstName}} {{trailfinder.lastName}} </td>
+        <td>{{traillist.lastName}}, {{traillist.firstName}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
