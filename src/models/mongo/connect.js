@@ -1,8 +1,12 @@
 import * as dotenv from "dotenv";
 import Mongoose from "mongoose";
 
+
 import * as seeder from "mais-mongoose-seeder";
 import { seedData } from "./seed-data.js";
+
+
+
 
 const seedLib = seeder.default;
 

@@ -1,5 +1,7 @@
-import { db } from "../models/db.js";
 import bcrypt from "bcrypt";          // ADDED
+
+import { db } from "../models/db.js";
+
 const saltRounds = 10;                // ADDED
 
 
@@ -38,7 +40,7 @@ export const accountsController = {
       const user = await db.userStore.getUserByEmail(email);
       const passwordsMatch = await bcrypt.compare(password, user.password);    // ADDED
       if (!user || !passwordsMatch) {                                          // EDITED
-      // if (!user || user.password !== password) {
+    //  if (!user || user.password !== password) {
         return h.redirect("/");
       }
       request.cookieAuth.set({ id: user._id });
