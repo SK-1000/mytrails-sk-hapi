@@ -1,15 +1,17 @@
 <table class="table is-fullwidth">
   <thead>
-    <th>Amount</th>
-    <th>Method donated</th>
+    <th>Trail Name</th>
+    <th>Distance Km</th>
+    <th>Terrain Description</th>
     <th>Trailfinder</th>
     <th>Traillist</th>
   </thead>
   <tbody>
     {{#each trails}}
       <tr>
-        <td>{{amount}}</td>
-        <td>{{method}}</td>
+        <td>{{trailname}}</td>
+        <td>{{distancekm}}</td>
+        <td>{{terraindescription}}</td>
         <td> {{trailfinder.firstName}} {{trailfinder.lastName}} </td>
         <td>{{traillist.lastName}}, {{traillist.firstName}}</td>
       </tr>

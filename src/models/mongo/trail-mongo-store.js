@@ -11,10 +11,11 @@ export const trailMongoStore = {
     return trails;
   },
 
-  async addtrail(amount, method, trailfinder, traillist, lat, lng) {
+  async addtrail(trailname, distancekm, terraindescription, trailfinder, traillist, lat, lng) {
     const newTrail = new Trail({
-      amount,
-      method,
+      trailname,
+      distancekm,
+      terraindescription,
       trailfinder: trailfinder._id,
       traillist: traillist._id,
       lat,

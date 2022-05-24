@@ -12,7 +12,7 @@ export const trailsController = {
       const trails = await db.trailStore.getAllTrails();
       let total = 0;
       trails.forEach((trail) => {
-        total += trail.amount;
+        total += trail.distancekm;
       });
       return h.view("Report", {
         title: "Trails added to Date",
@@ -27,7 +27,7 @@ export const trailsController = {
         const loggedInUser = request.auth.credentials;
         const rawTraillist = request.payload.traillist.split(",");
         const traillist = await db.traillistStore.findByName(rawTraillist[0], rawTraillist[1]);
-        await db.trailStore.addtrail(request.payload.amount, request.payload.method, loggedInUser._id, traillist._id);
+        await db.trailStore.addtrail(request.payload.trailname, request.payload.distancekm, request.payload.terraindescription, loggedInUser._id, traillist._id);
         return h.redirect("/report");
       } catch (err) {
         return h.view("main", { errors: [{ message: err.message }] });

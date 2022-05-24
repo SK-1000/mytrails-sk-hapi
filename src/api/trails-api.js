@@ -31,8 +31,9 @@ export const trailsApi = {
         return Boom.notFound("No Traillist with this id");
       }
       const trail = await db.trailStore.addtrail(
-        request.payload.amount,
-        request.payload.method,
+        request.payload.trailname,
+        request.payload.distancekm,
+        request.payload.terraindescription,
         request.auth.credentials,
         traillist,
         request.payload.lat,

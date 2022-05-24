@@ -3,8 +3,11 @@ import Mongoose from "mongoose";
 const { Schema } = Mongoose;
 
 const trailSchema = new Schema({
-  amount: Number,
-  method: String,
+  trailname: String,
+  distancekm: Number,
+  terraindescription: String,
+  lat: String,
+  lng: String,
   trailfinder: {
     type: Schema.Types.ObjectId,
     ref: "User",

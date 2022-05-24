@@ -1,11 +1,12 @@
 <form action="/addtrail" method="POST">
   <div class="field">
-    <label class="label">Enter Amount</label> <input class="input" type="number" placeholder="Euros" name="amount">
+    <label class="label">Enter Trail Name</label> <input class="input" type="string" name="trailname">
+    <label class="label">Enter Trail Distance</label> <input class="input" type="number" name="distancekm">
   </div>
   <div class="field">
     <div class="control">
-      <input class="radio" type="radio" name="method" value="paypal"> Paypal
-      <input class="radio" type="radio" name="method" value="cash"> Cash
+      <input class="radio" type="radio" name="terraindescription" value="steep"> Steep
+      <input class="radio" type="radio" name="terraindescription" value="flat"> Flat
     </div>
   </div>
   <div class="field">
