@@ -4,7 +4,7 @@ export const trailsController = {
   index: {
     handler: async function (request, h) {
       const traillists = await db.traillistStore.getAllTraillists();
-      return h.view("AddTrail", { title: "Add a new Trail", traillists: traillists });
+      return h.view("Addtrail", { title: "Add a new Trail", traillists: traillists });
     },
   },
   report: {
