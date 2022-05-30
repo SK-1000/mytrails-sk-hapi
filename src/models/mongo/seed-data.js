@@ -22,15 +22,11 @@ export const seedData = {
   },
   traillists: {
     _model: "Traillist",
-    lisa: {
-      firstName: "Lisa",
-      lastName: "Simpson",
-      office: "President",
+    strolls: {
+      title: "Strolls",
     },
-    donald: {
-      firstName: "Donald",
-      lastName: "Simpson",
-      office: "President",
+    hikes: {
+      title: "Hikes",
     },
   },
   trails: {
@@ -42,7 +38,7 @@ export const seedData = {
       lat: "52.160858",
       lng: "-7.152420",
       trailfinder: "->users.bart",
-      traillist: "->traillists.lisa",
+      traillist: "->traillists.strolls",
     },
     two: {
       trailname: "Demense",
@@ -51,7 +47,7 @@ export const seedData = {
       lat: "52.149220",
       lng: "-6.994620",
       trailfinder: "->users.marge",
-      traillist: "->traillists.lisa",
+      traillist: "->traillists.strolls",
     },
     three: {
       trailname: "Tomies",
@@ -60,7 +56,7 @@ export const seedData = {
       lat: "52.161290",
       lng: "-7.231540",
       trailfinder: "->users.homer",
-      traillist: "->traillists.donald",
+      traillist: "->traillists.hikes",
     },
   },
 };

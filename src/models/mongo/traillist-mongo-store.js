@@ -11,10 +11,9 @@ export const traillistMongoStore = {
     return traillist;
   },
 
-  async findByName(lastName, firstName) {
+  async findByName(title) {
     const traillist = await Traillist.findOne({
-      lastName,
-      firstName,
+      title,
     });
     return traillist;
   },

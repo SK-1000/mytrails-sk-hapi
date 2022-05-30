@@ -4,16 +4,23 @@
     <label class="label">Enter Trail Distance</label> <input class="input" type="number" name="distancekm">
   </div>
   <div class="field">
+     <label class="label">Enter Trail Terrain</label> 
     <div class="control">
       <input class="radio" type="radio" name="terraindescription" value="steep"> Steep
       <input class="radio" type="radio" name="terraindescription" value="flat"> Flat
+      <input class="radio" type="radio" name="terraindescription" value="hills"> Hills
+      <input class="radio" type="radio" name="terraindescription" value="forest"> Forest
+      <input class="radio" type="radio" name="terraindescription" value="rural"> Rural
+      <input class="radio" type="radio" name="terraindescription" value="steps"> Steps
+      <input class="radio" type="radio" name="terraindescription" value="shoreline"> Shoreline
     </div>
   </div>
   <div class="field">
+     <label class="label">Which trail list would you like to add your new trail to?</label> 
     <div class="select">
       <select name="traillist">
         {{#each traillists }}
-          <option> {{lastName}},{{firstName}}</option>
+          <option> {{title}}</option>
         {{/each}}
       </select>
     </div>
@@ -24,3 +31,33 @@
     </div>
   </div>
 </form>
+{{!-- 
+<form action="/addtrail" method="POST">
+  <label>Enter Trail Details:</label>
+  <div class="field is-horizontal">
+    <div class="field-body">
+      
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter Trail Name" name="trailname">
+      </div>
+      <div class="field">
+        <div class="select" type="text" name="terraindescription" >
+          <select name="terraindescription">
+            <option>Select terrain</option>
+            <option name="terraindescription" value="flat">flat</option>
+            <option name="terraindescription" value="hills">hills</option>
+            <option name="terraindescription" value="steep">steep</option>
+            <option name="terraindescription" value="forest">forest</option>
+            <option name="terraindescription" value="rural">rural</option>
+            <option name="terraindescription" value="steps">steps</option>
+            <option name="terraindescription" value="shoreline">shoreline</option>
+         </select>
+        </div>
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter Trail Distance (KM)" name="distancekm">
+      </div>
+    </div>
+  </div>
+  <button class="button is-primary">Add Trail</button>
+</form> --}}

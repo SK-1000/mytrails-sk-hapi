@@ -35,12 +35,10 @@ export const testUsers = [
 
 export const testTraillists = [
   {
-    firstName: "Lisa",
-    lastName: "Simpson",
+    title: "Strolls",
   },
   {
-    firstName: "Maggie",
-    lastName: "Simpson",
+    title: "Climbs",
   },
 ];
 
