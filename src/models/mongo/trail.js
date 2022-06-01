@@ -8,6 +8,7 @@ const trailSchema = new Schema({
   terraindescription: String,
   lat: String,
   lng: String,
+  img: String, // added for trail image
   trailfinder: {
     type: Schema.Types.ObjectId,
     ref: "User",

@@ -12,6 +12,7 @@ export const webRoutes = [
   { method: "GET", path: "/addtrail", config: trailsController.index },
   { method: "POST", path: "/addtrail", config: trailsController.addtrail },
   { method: "GET", path: "/report", config: trailsController.report },
+  { method: "POST", path: "/trail/{id}/uploadimage", config: trailsController.uploadImage },  // added as part of adding image per trail
 
   {
     method: "GET",
