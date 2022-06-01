@@ -1,4 +1,4 @@
-export const serviceUrl = "https://ancient-earth-27621.herokuapp.com/";
+export const serviceUrl = "http://localhost:4000";
 
 export const maggie = {
   firstName: "Maggie",
